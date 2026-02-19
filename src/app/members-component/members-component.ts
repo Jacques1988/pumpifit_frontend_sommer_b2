@@ -1,7 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { MembersListComponent } from './members-list-component/members-list-component';
 import { MembersService } from '../services/members-service';
-import { Member } from '../shared/models/member';
 
 @Component({
   selector: 'app-members-component',
