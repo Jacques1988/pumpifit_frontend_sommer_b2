@@ -1,0 +1,6 @@
+<p>ID: {{ member().id }}</p>
+<p>Vorname: {{ member().first_name }}</p>
+<p>Nachname: {{ member().last_name }}</p>
+<p>Alter: {{ member().age }}</p>
+<button (click)="onDeleteMember(member().id)">Löschen</button>
+<hr />

@@ -1,0 +1,10 @@
+<h1>Fitnessstudio Mitglieder</h1>
+<ul class="list-group">
+  @if (members.hasValue()) {
+    @for (member of members.value(); track member.id) {
+      <app-members-list-component
+        [member]="member"
+      ></app-members-list-component>
+    }
+  }
+</ul>
