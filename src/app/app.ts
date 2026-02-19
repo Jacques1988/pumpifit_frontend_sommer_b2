@@ -4,7 +4,7 @@ import { MembersComponent } from './members-component/members-component';
 
 @Component({
   selector: 'app-root',
-  imports: [MembersComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

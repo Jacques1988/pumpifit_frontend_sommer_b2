@@ -17,6 +17,11 @@ export class MembersService {
     return this.allMembers;
   }
 
+  getMemberById(id: string) {
+    const memberId = +id;
+    return httpResource<Member>(() => `${this.membersAPIUrl}${memberId}`);
+  }
+
   deleteMember(id: number): Observable<Member> {
     return this.httpClient.delete<Member>(`${this.membersAPIUrl}${id}`);
   }
