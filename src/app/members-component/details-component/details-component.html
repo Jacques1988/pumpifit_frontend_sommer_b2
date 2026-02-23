@@ -1,10 +1,13 @@
 <button routerLink="">< zurück</button>
 
 <h1>Mitglied Details</h1>
-<form>
-  <input type="text" />
-  <input type="text" />
-  <input type="text" />
-  <input type="text" />
-  <button>Bearbeiten</button>
-</form>
+
+@if (this.member.hasValue()) {
+  <form (submit)="onSubmit($event)">
+    <input type="text" [formField]="memberForm.id" />
+    <input type="text" [formField]="memberForm.first_name" />
+    <input type="text" [formField]="memberForm.last_name" />
+    <input type="text" [formField]="memberForm.age" />
+    <button type="submit">Bearbeiten</button>
+  </form>
+}
